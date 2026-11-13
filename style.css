@@ -1,0 +1,336 @@
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f7f9;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+section {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+label {
+    display: block;
+    margin-top: 16px;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 6px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 24px;
+    background-color: #2176ae;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #edf4fa;
+    border-radius: 10px;
+}
+
+.score-board span {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#opponent-point-button {
+    background-color: #64748b;
+}
+
+#undo-button {
+    background-color: #ffffff;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+.serve-input {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    font-size: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.error-input {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+}
+
+.error-input input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.error-input label {
+    margin-top: 12px;
+}
+
+.chart-row {
+    margin: 16px 0;
+}
+
+.chart-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.chart-track {
+    height: 24px;
+    background-color: #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.chart-bar {
+    height: 100%;
+    background-color: #2176ae;
+    border-radius: 6px;
+}
+
+.match-item {
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f8fafc;
+}
+
+.match-item p {
+    margin: 6px 0;
+}
+
+.match-item button {
+    margin-top: 10px;
+}
+
+.growth-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.growth-table th,
+.growth-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.growth-table th {
+    background-color: #e8f1f8;
+}
+#growth-chart {
+    width: 100%;
+    margin-top: 15px;
+    overflow-x: auto;
+}
+
+#growth-chart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+.match-item button {
+    width: auto;
+    margin-right: 8px;
+    margin-top: 10px;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #b02a37;
+}
+.point-history-item {
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+}
+
+.point-history-item button {
+    width: auto;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+#point-edit-screen select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 16px;
+}
+
+#point-edit-screen label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+#point-edit-screen button {
+    margin-top: 12px;
+}
+#backup-screen {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#backup-screen button {
+    margin: 10px 0;
+}
+
+#import-file {
+    display: block;
+    margin: 15px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =====================================
+   スマホ対応
+===================================== */
+
+/* 画面幅の計算を統一 */
+* {
+    box-sizing: border-box;
+}
+
+/* スマホで横にはみ出さないようにする */
+body {
+    width: 100%;
+}
+
+/* 小さい画面での調整 */
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin: 12px 0 18px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    section {
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    /* ボタンを指で押しやすく */
+    button {
+        min-height: 48px;
+        padding: 14px 12px;
+        font-size: 16px;
+    }
+
+    /* 得点ボタンをさらに大きく */
+    #own-point-button,
+    #opponent-point-button {
+        min-height: 68px;
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    /* スコア表示 */
+    .score-board {
+        padding: 12px 8px;
+        gap: 8px;
+    }
+
+    .score-board span {
+        font-size: 30px;
+    }
+
+    /* 入力欄 */
+    input,
+    select {
+        min-height: 48px;
+        font-size: 16px;
+    }
+
+    /* 試合一覧の操作ボタン */
+    .match-item button,
+    .point-history-item button {
+        width: 100%;
+        margin: 8px 0 0;
+    }
+
+    /* 成長分析の表が横にはみ出さないように */
+    .growth-table {
+        font-size: 12px;
+    }
+
+    .growth-table th,
+    .growth-table td {
+        padding: 6px 4px;
+        overflow-wrap: anywhere;
+    }
+
+    /* 編集画面 */
+    #point-edit-screen button {
+        width: 100%;
+    }
+
+    /* バックアップ画面 */
+    #backup-screen {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
